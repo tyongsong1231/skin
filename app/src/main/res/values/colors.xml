@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="page4_color_normal">@android:color/darker_gray</color>
+    <color name="page3_color_normal">@android:color/darker_gray</color>
+    <color name="page2_color_normal">@android:color/darker_gray</color>
+    <color name="page1_color_normal">@android:color/darker_gray</color>
+    <color name="title_color_normal">#3F51B5</color>
+    <color name="fragment_color_normal">#b8bdde</color>
+    <color name="tab_color_normal">#59629b</color>
+
+</resources>

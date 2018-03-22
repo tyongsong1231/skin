@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/apk/skin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragment_color_normal"
+    android:orientation="vertical"
+    skin:enable="true">
+
+    <TextView
+        android:gravity="center_vertical"
+        android:id="@+id/item_tv"
+        android:layout_width="match_parent"
+        android:text="000"
+        android:layout_height="wrap_content"
+        android:minHeight="66dp" />
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/apk/skin"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:drawableTop="@drawable/page4_normal"
+    android:gravity="center"
+    android:text="@string/page4_normal"
+    android:textColor="@color/page4_color_normal"
+    android:textSize="13sp"
+    skin:enable="true"/>
+
