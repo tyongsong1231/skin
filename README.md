@@ -15,5 +15,5 @@ ResPluginImpl.getsInstance().load(  <br>
 
 //根据规则设置资源包 <br>
 
-skin ： AndroidLibrary 资源更换的主逻辑
+skin ： AndroidLibrary 资源更换的主逻辑 <br>
 SkinPluginApk ： android工程，主要用于生成资源插件包
