@@ -13,12 +13,11 @@ SkinPluginApk ： android工程，主要用于生成资源插件包<br>
 
 流程：<br>  
 注册Activity生命周期回调<br>  
-在onActivityCreated中，给LayouInflater设置自定义的Factory。 <br>
-1.1自定义Factory中大部分逻辑是LayoutInflater的createViewFromTag方法的分解，直接反射调用对应方法。 <br>
-1.2在Factory成功创建View后，根据App中资源的名称和自定义的映射关系，找到插件包中对应资源的名称。获取插件包中对应的资源，设置给该view。<br>
-1.3记录属性有更改的View，用于用户设置不同皮肤后及时更改View的属性到设置的值。<br>
-1.4根据记录修改StatusBar和NavigationBar的属性。<br>
-
+1.在onActivityCreated中，给LayouInflater设置自定义的Factory。 <br>
+ 1.1自定义Factory中大部分逻辑是LayoutInflater的createViewFromTag方法的分解，直接反射调用对应方法。 <br>
+ 1.2在Factory成功创建View后，根据App中资源的名称和自定义的映射关系，找到插件包中对应资源的名称。获取插件包中对应的资源，设置给该view。<br>
+ 1.3记录属性有更改的View，用于用户设置不同皮肤后及时更改View的属性到设置的值。<br>
+ 1.4根据记录修改StatusBar和NavigationBar的属性。<br>
 2.在onActivityDestroyed中，清除该Activity中对应的记录。<br>  
 
 
@@ -26,7 +25,7 @@ SkinPluginApk ： android工程，主要用于生成资源插件包<br>
 1.在Application中调用,ResPluginImpl.getsInstance().init(Application); 用于注册Activity的周期回调方法。<br>
 2.在Activity的super.onCreate前调用ResPluginImpl.getsInstance().load("插件路径", "包名")方法，用于创建插件的Resouce对象。super.onCreate中将会调用我们注册的onActivityCreated方法。在该方法中设置StatusBar和NavigationBar的属性，如果对应的资源是来自于插件包，而此时还没有插件包的Resouce对象就GG了。当然，若果并不是，打开应用马上就需要加载插件包中的资源时，你只需要保证在运行下面方法前调用就该方法就ok。<br>
 
-//设置所有的TextView及其子类的字体 <br>
+ //设置所有的TextView及其子类的字体 <br>
  //fzxz.TTF：插件中字体文件的名称。放在assets/font目录下 <br>
  ResPluginImpl.getsInstance().setTypeFace(view.getContext(), "fzxz.TTF");<br>
  
@@ -54,7 +53,7 @@ SkinPluginApk ： android工程，主要用于生成资源插件包<br>
 其原理并不复杂，相信你看了运行效果后马上自己就会写了。<br>
 
 注意：不同的字体文件，在不同版本上不一定适配，比如可能不一定支持中文, 动态权限不要忘了添加。<br>
-如果你不知道怎么让一个Android Library独立运行（不能被依赖）,这是一个最直白的列子<br>
+如果你想知道怎么让一个Android Library独立运行（不能被依赖）, 这也是一个最直白的列子<br>
 
 运行效果截图：<br>
 ![image](https://github.com/tyongsong1231/skin/blob/master/app/src/main/assets/screenshots/yunxing1.png) 
