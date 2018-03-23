@@ -19,8 +19,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.skin.SkinConfig.ResUtil;
 import com.example.skin.SkinCore.ResPluginImpl;
 
 import java.io.File;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         ResPluginImpl.getsInstance().load(
                 Environment.getExternalStorageDirectory() + File.separator + "plugin.apk",
-                "com.example.tys.skinpluginapk");
+                "com.example.skinpluginapk");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -88,14 +88,12 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     public void set(final View view) {
+        Toast.makeText(this, "000", 0).show();
         if (pop == null) {
             View contentView = LayoutInflater.from(this).inflate(R.layout.pop, null);
             contentView.findViewById(R.id.pf1).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ResPluginImpl.getsInstance().load(
-                            Environment.getExternalStorageDirectory() + File.separator + "plugin.apk",
-                            "com.example.tys.skinpluginapk");
                     ResPluginImpl.getsInstance().setTypeFace(view.getContext(), "fzxz.TTF");
                     ResPluginImpl.getsInstance().setStatusBarColor(MainActivity.this, "status_bar_color_pf1");
                     ResPluginImpl.getsInstance().setNavigateBarColor(MainActivity.this, "navigation_bar_color_pf1");
@@ -106,9 +104,6 @@ public class MainActivity extends AppCompatActivity  {
             contentView.findViewById(R.id.pf2).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ResPluginImpl.getsInstance().load(
-                            Environment.getExternalStorageDirectory() + File.separator + "plugin.apk",
-                            "com.example.tys.skinpluginapk");
                     ResPluginImpl.getsInstance().setTypeFace(view.getContext(), "kt.ttf");
                     ResPluginImpl.getsInstance().setStatusBarColor(MainActivity.this, "status_bar_color_pf2");
                     ResPluginImpl.getsInstance().setNavigateBarColor(MainActivity.this, "navigation_bar_color_pf2");
@@ -119,9 +114,6 @@ public class MainActivity extends AppCompatActivity  {
             contentView.findViewById(R.id.pf3).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ResPluginImpl.getsInstance().load(
-                            Environment.getExternalStorageDirectory() + File.separator + "plugin.apk",
-                            "com.example.tys.skinpluginapk");
                     ResPluginImpl.getsInstance().setTypeFace(view.getContext(), "pop.ttf");
                     ResPluginImpl.getsInstance().setStatusBarColor(MainActivity.this, "status_bar_color_pf3");
                     ResPluginImpl.getsInstance().setNavigateBarColor(MainActivity.this, "navigation_bar_color_pf3");
@@ -133,9 +125,6 @@ public class MainActivity extends AppCompatActivity  {
             contentView.findViewById(R.id.pf4).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ResPluginImpl.getsInstance().load(
-                            Environment.getExternalStorageDirectory() + File.separator + "plugin.apk",
-                            "com.example.tys.skinpluginapk");
                     ResPluginImpl.getsInstance().setTypeFace(view.getContext(), "");
                     ResPluginImpl.getsInstance().setStatusBarColor(MainActivity.this, "");
                     ResPluginImpl.getsInstance().setNavigateBarColor(MainActivity.this, "");
@@ -146,14 +135,17 @@ public class MainActivity extends AppCompatActivity  {
 
             pop = new PopupWindow(this);
             pop.setContentView(contentView);
+            pop.setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+            pop.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
             pop.setOutsideTouchable(true);
         }
-        pop.showAsDropDown(view);
+            pop.showAsDropDown(view);
     }
 
 
 
     /**
+     *
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {

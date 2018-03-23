@@ -106,7 +106,6 @@ public class LayoutInflaterV1 implements LayoutInflater.Factory2 {
             if (view instanceof TextView) {
                 ResPluginImpl.getsInstance().changeTypeFace(appCompatActivity.getClass().getName(), view);
             }
-Log.e(TAG, "class:: "+ view.getClass().getName());
         }
         return view;
     }

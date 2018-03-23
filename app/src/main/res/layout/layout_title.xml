@@ -24,6 +24,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:onClick="set"
-        android:src="@android:drawable/stat_sys_phone_call" />
+        android:src="@drawable/tint_selector_normal"
+        skin:enable="true"
+        tools:ignore="MissingPrefix" />
 
 </RelativeLayout>

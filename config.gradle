@@ -1,0 +1,23 @@
+ext {
+    android = [
+            versionCodea    : 1,
+            versionName     : '1.0',
+            minSdkVersion   : 19,
+            targetSdkVersion: 27
+    ]
+
+    appId = [
+            'app'          : 'com.example.tys.ui',
+            'skinPluginApk': 'com.example.skinpluginapk'
+    ]
+
+    supportLibrary = '27.1.0'
+    dependencies = [
+            'appcompat-v7': "com.android.support:appcompat-v7:${supportLibrary}"
+    ]
+
+    //true : 模块,提供主模块引用
+    //false : 独立的app,可以单独运行。这里打包插件apk
+    isModel = false
+
+}

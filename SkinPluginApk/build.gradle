@@ -1,0 +1,54 @@
+if (isModel) {
+    //android module 模块
+    apply plugin: 'com.android.library'
+} else {
+    //android app 独立运行。 （配置applicationId, manifest, 启动Activity, res）
+    //配置成app模式后就不能应用了（app应用app）修改dependencies
+    apply plugin: 'com.android.application'
+}
+
+def cfg = rootProject.ext.android
+def appId = rootProject.ext.appId
+def dep = rootProject.ext.dependencies
+println("tys:${cfg.minSdkVersion} - appid:${appId.skinPluginApk}")
+
+android {
+    //cfg.targetSdkVersion  cfg['targetSdkVersion']
+    compileSdkVersion cfg.targetSdkVersion
+
+    defaultConfig {
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg['targetSdkVersion']
+        versionCode cfg['versionCodea']
+        versionName cfg['versionName']
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        if (!isModel) {
+            applicationId appId['skinPluginApk']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            if (!isModel) {
+                assets.srcDirs 'src/main/assets'
+                manifest.srcFile 'src/main/appSrc/AndroidManifest.xml'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation dep['appcompat-v7']
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}

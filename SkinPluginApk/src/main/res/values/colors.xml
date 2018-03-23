@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--//////////////////////////皮肤1///////////////////////////////-->
+    <color name="status_bar_color_pf1">#FF4081</color>
+    <color name="navigation_bar_color_pf1">#ab627b</color>
+    <color name="page1_color_pf1">#a63b60</color>
+    <color name="page2_color_pf1">#a63b60</color>
+    <color name="page3_color_pf1">#a63b60</color>
+    <color name="page4_color_pf1">#a63b60</color>
+    <color name="title_color_pf1">#a73fb5</color>
+    <color name="fragment_color_pf1">#ab366e</color>
+    <color name="tab_color_pf1">#7d35a1</color>
+
+    <!--//////////////////////////皮肤2///////////////////////////////-->
+    <color name="status_bar_color_pf2">#ffef40</color>
+    <color name="navigation_bar_color_pf2">#b98f2e</color>
+    <color name="page1_color_pf2">#d69b3d</color>
+    <color name="page2_color_pf2">#d69b3d</color>
+    <color name="page3_color_pf2">#d69b3d</color>
+    <color name="page4_color_pf2">#d69b3d</color>
+    <color name="title_color_pf2">#e4d960</color>
+    <color name="fragment_color_pf2">#ece52c</color>
+    <color name="tab_color_pf2">#7d971d</color>
+
+    <!--//////////////////////////皮肤3///////////////////////////////-->
+    <color name="status_bar_color_pf3">#335cc4</color>
+    <color name="navigation_bar_color_pf3">#36679c</color>
+    <color name="page1_color_pf3">#459bba</color>
+    <color name="page2_color_pf3">#459bba</color>
+    <color name="page3_color_pf3">#459bba</color>
+    <color name="page4_color_pf3">#459bba</color>
+    <color name="title_color_pf3">#7781b9</color>
+    <color name="fragment_color_pf3">#3f51bf</color>
+    <color name="tab_color_pf3">#6492b7</color>
+
+</resources>
