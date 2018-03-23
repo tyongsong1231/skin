@@ -3,7 +3,7 @@
 Android换肤(动态设置view属性) <br>  
 
 工程结构：<br>  
-Ui ： 应用<br>  
+Ui ： 应用工程<br>  
 skin ： AndroidLibrary 资源更换的主逻辑 <br>
 SkinPluginApk ： android工程，主要用于生成资源插件包<br>  
 
@@ -53,7 +53,8 @@ SkinPluginApk ： android工程，主要用于生成资源插件包<br>
 打包SkinPluginApk工程将生成的Apk包放在load时指定的目录下运行。通过右上角按键选择不同皮肤，就能看到效果。<br>
 其原理并不复杂，相信你看了运行效果后马上自己就会写了。<br>
 
-注意：不同的字体文件，在不同版本上不一定适配，比如可能不一定支持中文, 动态权限不要忘了添加。
+注意：不同的字体文件，在不同版本上不一定适配，比如可能不一定支持中文, 动态权限不要忘了添加。<br>
+如果你不知道怎么让一个Android Library独立运行（不能被依赖）,这是一个最直白的列子<br>
 
 运行效果截图：<br>
 ![image](https://github.com/tyongsong1231/skin/blob/master/app/src/main/assets/screenshots/yunxing1.png) 
