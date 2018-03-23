@@ -56,6 +56,6 @@ SkinPluginApk ： android工程，主要用于生成资源插件包
 注意：不同的字体文件，在不同版本上不一定适配，比如可能不一定支持中文, 动态权限不要忘了添加。
 
 运行效果截图：
-![image](https://github.com/tyongsong1231/Android_whiteboard/blob/master/app/src/main/assets/screenshots/yunxing1.png) <br>
-![image](https://github.com/tyongsong1231/Android_whiteboard/blob/master/app/src/main/assets/screenshots/yunxing1.png) <br>
+![image](https://github.com/tyongsong1231/skin/blob/master/app/src/main/assets/screenshots/yunxing1.png) <br>
+![image](https://github.com/tyongsong1231/skin/blob/master/app/src/main/assets/screenshots/yunxing2.png) <br>
 
