@@ -14,10 +14,10 @@ SkinPluginApk ： android工程，主要用于生成资源插件包
 流程：
 注册Activity生命周期回调，
 在onActivityCreated中，给LayouInflater设置自定义的Factory。 <br>
-1.1自定义Factory中大部分逻辑是LayoutInflater的createViewFromTag方法的分解，直接反射调用对应方法。
-1.2在Factory成功创建View后，根据App中资源的名称和自定义的映射关系，找到插件包中对应资源的名称。获取插件包中对应的资源，设置给该view。
-1.3记录属性有更改的View，用于用户设置不同皮肤后及时更改View的属性到设置的值。
-1.4根据记录修改StatusBar和NavigationBar的属性。
+1.1自定义Factory中大部分逻辑是LayoutInflater的createViewFromTag方法的分解，直接反射调用对应方法。 <br>
+1.2在Factory成功创建View后，根据App中资源的名称和自定义的映射关系，找到插件包中对应资源的名称。获取插件包中对应的资源，设置给该view。<br>
+1.3记录属性有更改的View，用于用户设置不同皮肤后及时更改View的属性到设置的值。<br>
+1.4根据记录修改StatusBar和NavigationBar的属性。<br>
 
 2.在onActivityDestroyed中，清除该Activity中对应的记录。
 
