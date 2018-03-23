@@ -2,24 +2,24 @@
 
 Android换肤(动态设置view属性) <br>  
 
-工程结构：
-Ui ： 应用
+工程结构：<br>  
+Ui ： 应用<br>  
 skin ： AndroidLibrary 资源更换的主逻辑 <br>
-SkinPluginApk ： android工程，主要用于生成资源插件包
+SkinPluginApk ： android工程，主要用于生成资源插件包<br>  
 
 原理：<br>
  在原LayoutInflater createView后加入自己的处理逻辑。用于设置View的属性  <br>
  比如：background textColor textSize TypeFace selector等 <br>
 
-流程：
-注册Activity生命周期回调，
+流程：<br>  
+注册Activity生命周期回调<br>  
 在onActivityCreated中，给LayouInflater设置自定义的Factory。 <br>
 1.1自定义Factory中大部分逻辑是LayoutInflater的createViewFromTag方法的分解，直接反射调用对应方法。 <br>
 1.2在Factory成功创建View后，根据App中资源的名称和自定义的映射关系，找到插件包中对应资源的名称。获取插件包中对应的资源，设置给该view。<br>
 1.3记录属性有更改的View，用于用户设置不同皮肤后及时更改View的属性到设置的值。<br>
 1.4根据记录修改StatusBar和NavigationBar的属性。<br>
 
-2.在onActivityDestroyed中，清除该Activity中对应的记录。
+2.在onActivityDestroyed中，清除该Activity中对应的记录。<br>  
 
 
 使用：<br>
