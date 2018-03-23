@@ -17,3 +17,6 @@ ResPluginImpl.getsInstance().load(  <br>
 
 skin ： AndroidLibrary 资源更换的主逻辑 <br>
 SkinPluginApk ： android工程，主要用于生成资源插件包
+
+将生成的资源插件包放在load 配置的目录中，运行就能看到效果。动态权限 <br>
+注意：不同的字体文件，在不同版本上不一定适配。
