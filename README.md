@@ -21,12 +21,12 @@ SkinPluginApk ： android工程，主要用于生成资源插件包
 
 2.在onActivityDestroyed中，清除该Activity中对应的记录。
 
-使用：
-1.在Application中调用,ResPluginImpl.getsInstance().init(Application); 用于注册Activity的周期回调方法。
 
+使用：<br>
+1.在Application中调用,ResPluginImpl.getsInstance().init(Application); 用于注册Activity的周期回调方法。<br>
 2.在Activity的super.onCreate前调用ResPluginImpl.getsInstance().load("插件路径", "包名")方法，用于创建插件的Resouce对象。super.onCreate中将会调用我们注册的onActivityCreated方法。在该方法中设置StatusBar和NavigationBar的属性，如果对应的资源是来自于插件包，而此时还没有插件包的Resouce对象就GG了。当然，若果并不是，打开应用马上就需要加载插件包中的资源时，你只需要保证在运行下面方法前调用就该方法就ok。<br>
- 
- //设置所有的TextView及其子类的字体 <br>
+
+//设置所有的TextView及其子类的字体 <br>
  //fzxz.TTF：插件中字体文件的名称。放在assets/font目录下 <br>
  ResPluginImpl.getsInstance().setTypeFace(view.getContext(), "fzxz.TTF");<br>
  
